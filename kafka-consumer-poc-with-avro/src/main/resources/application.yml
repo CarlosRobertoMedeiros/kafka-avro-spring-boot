@@ -1,0 +1,34 @@
+server:
+  port: 8083
+
+kafka:
+  #topic: topic-usuario-consumo
+  topic:
+    consumer:
+      name: topic-usuario-resposta
+
+spring:
+  application:
+    name: consumer-usuario-ms
+
+  kafka:
+
+    properties:
+      bootstrap-servers: localhost:9092
+      schema:
+        registry:
+          url: http://127.0.0.1:8081
+
+    consumer:
+      #group-id: group-1
+      group-id: topic-usuario-consumo
+      auto-offset-reset: latest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      #value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      #properties.spring.deserializer.value.delegate.class=org.springframework.kafka.support.serializer.JsonDeserializer
+
+      properties:
+        specific:
+          avro:
+            reader: true
