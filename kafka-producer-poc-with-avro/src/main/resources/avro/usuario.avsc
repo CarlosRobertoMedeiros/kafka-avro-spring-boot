@@ -1,0 +1,19 @@
+{
+  "name": "UsuarioAvro",
+  "type": "record",
+  "namespace": "br.com.roberto.kafkaproducerpocwithavro.avro",
+  "fields": [
+    {
+      "name": "nome",
+      "type": "string"
+    },
+    {
+      "name": "endereco",
+      "type": "string"
+    },
+    {
+      "name": "idade",
+      "type": "int"
+    }
+  ]
+}
