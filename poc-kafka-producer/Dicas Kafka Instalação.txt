@@ -1,0 +1,47 @@
+Baixa nesse link
+   - Extraia a pasta até expor os diretórios
+   - modifique o arquivo de conf da pasta server.properties
+	# A comma separated list of directories under which to store log files
+	#log.dirs=/tmp/kafka-logs
+	log.dirs=C:/Users/carlo/Downloads/kafka_2.13-3.2.0/kafka-logs 
+
+    - modifique no arquivo do zookeeper.properties o local onde ele se disponibiliza
+	
+	o diretório zookeper-data foi criado
+	#dataDir=/tmp/zookeeper
+	dataDir=C:/Users/carlo/Downloads/kafka_2.13-3.2.0/zookeper-data
+
+    - Inicialize o zookeper e o server
+         entre no diretório: C:\Users\carlo\Downloads\kafka_2.13-3.2.0\kafka_2.13-3.2.0\bin\windows
+	execute: bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+    - Inicialize o server (Se tiver mais de um servidor tem que levantar uma instância para cada)
+	entre no diretório: C:\Users\carlo\Downloads\kafka_2.13-3.2.0\
+	execute: bin\windows\kafka-server-start.bat config\server.properties
+
+    - Criação de Tópico solicitacao-transferencia
+	bin/kafka-topics.sh --create
+	bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic solicitacao-transferencia
+	
+     -  Listar os tópicos
+	bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+	bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+	
+      - Criando um produtor
+	kafka-console-producer.bat --broker-list localhost:9092 --topic LOJA_NOVO_PEDIDO
+       
+      - Criando um consumidor
+	kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic LOJA_NOVO_PEDIDO //A partir de agora
+	kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic LOJA_NOVO_PEDIDO --from-beginning
+	
+      - Lista os tópicos
+        kafka-topics.bat --describe --bootstrap-server localhost:9092
+
+
+
+Montar o Kafka
+cmd.exe /k "%ConEmuBaseDir%\CmdInit.cmd" -new_console::t:"kafka-zookeper"  -new_console:d:"D:\app2\kafka_2.13-3.2.0\kafka_2.13-3.2.0\"
+
+cmd.exe /k "%ConEmuBaseDir%\CmdInit.cmd" -new_console::t:"kafka-server1"  -new_console:d:"D:\app2\kafka_2.13-3.2.0\kafka_2.13-3.2.0\"
+
+cmd.exe /k "%ConEmuBaseDir%\CmdInit.cmd" -new_console::t:"kafka-comandos"  -new_console:d:"D:\app2\kafka_2.13-3.2.0\kafka_2.13-3.2.0\" 
