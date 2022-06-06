@@ -20,7 +20,7 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public ResponseEntity<UsuarioDto> saveUser(@RequestBody UsuarioDto usuarioDto){
+    public ResponseEntity<UsuarioDto> enviarMensagem(@RequestBody UsuarioDto usuarioDto){
         return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.enviar(usuarioDto));
     }
 
