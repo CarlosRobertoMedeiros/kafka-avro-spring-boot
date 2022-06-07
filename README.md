@@ -21,6 +21,8 @@
 		microservice-kafka-avro
 	
 	- IDE Conduktor for Managed Kafka
+	
+	- H2 Database in Memory 
 
 ## Environment
 	- Execute the Stack Using 
@@ -32,5 +34,5 @@
 	- kafka-consumer-poc-with-avro
 
 ## Trick
-	- Put a message(kafka-producer-poc-with-avro) using the postman collection and see the kafka-consumer-poc-with-avro receiving the message.
+	- Put a message(kafka-producer-poc-with-avro) using the postman collection and see the kafka-consumer-poc-with-avro receiving the message. The message received update the database "table tb_usuario"
 
