@@ -32,6 +32,5 @@
 	- kafka-consumer-poc-with-avro
 
 ## Trick
-	 Put a message(kafka-producer-poc-with-avro) using the postman collection and see the
-kafka-consumer-poc-with-avro receiving the message.
+	- Put a message(kafka-producer-poc-with-avro) using the postman collection and see the kafka-consumer-poc-with-avro receiving the message.
 
