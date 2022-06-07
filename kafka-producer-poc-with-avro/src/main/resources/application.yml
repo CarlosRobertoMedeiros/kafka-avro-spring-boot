@@ -26,4 +26,4 @@ auto:
 
 topic:
   name:
-    producer: topic-usuario-2
+    producer: topic-usuario

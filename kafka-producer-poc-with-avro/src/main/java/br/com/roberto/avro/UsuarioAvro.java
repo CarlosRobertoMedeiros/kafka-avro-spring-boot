@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package br.com.roberto.kafkaproducerpocwithavro.avro;
+package br.com.roberto.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class UsuarioAvro extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -6163395790876494469L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"UsuarioAvro\",\"namespace\":\"br.com.roberto.kafkaproducerpocwithavro.avro\",\"fields\":[{\"name\":\"nome\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"endereco\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"idade\",\"type\":\"int\"}]}");
+  private static final long serialVersionUID = -4789687207079003640L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"UsuarioAvro\",\"namespace\":\"br.com.roberto.avro\",\"fields\":[{\"name\":\"nome\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"endereco\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"idade\",\"type\":\"int\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -151,8 +151,8 @@ public class UsuarioAvro extends org.apache.avro.specific.SpecificRecordBase imp
    * Creates a new UsuarioAvro RecordBuilder.
    * @return A new UsuarioAvro RecordBuilder
    */
-  public static br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder newBuilder() {
-    return new br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder();
+  public static br.com.roberto.avro.UsuarioAvro.Builder newBuilder() {
+    return new br.com.roberto.avro.UsuarioAvro.Builder();
   }
 
   /**
@@ -160,11 +160,11 @@ public class UsuarioAvro extends org.apache.avro.specific.SpecificRecordBase imp
    * @param other The existing builder to copy.
    * @return A new UsuarioAvro RecordBuilder
    */
-  public static br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder newBuilder(br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder other) {
+  public static br.com.roberto.avro.UsuarioAvro.Builder newBuilder(br.com.roberto.avro.UsuarioAvro.Builder other) {
     if (other == null) {
-      return new br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder();
+      return new br.com.roberto.avro.UsuarioAvro.Builder();
     } else {
-      return new br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder(other);
+      return new br.com.roberto.avro.UsuarioAvro.Builder(other);
     }
   }
 
@@ -173,11 +173,11 @@ public class UsuarioAvro extends org.apache.avro.specific.SpecificRecordBase imp
    * @param other The existing instance to copy.
    * @return A new UsuarioAvro RecordBuilder
    */
-  public static br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder newBuilder(br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro other) {
+  public static br.com.roberto.avro.UsuarioAvro.Builder newBuilder(br.com.roberto.avro.UsuarioAvro other) {
     if (other == null) {
-      return new br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder();
+      return new br.com.roberto.avro.UsuarioAvro.Builder();
     } else {
-      return new br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder(other);
+      return new br.com.roberto.avro.UsuarioAvro.Builder(other);
     }
   }
 
@@ -200,7 +200,7 @@ public class UsuarioAvro extends org.apache.avro.specific.SpecificRecordBase imp
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder other) {
+    private Builder(br.com.roberto.avro.UsuarioAvro.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.nome)) {
         this.nome = data().deepCopy(fields()[0].schema(), other.nome);
@@ -220,7 +220,7 @@ public class UsuarioAvro extends org.apache.avro.specific.SpecificRecordBase imp
      * Creates a Builder by copying an existing UsuarioAvro instance
      * @param other The existing instance to copy.
      */
-    private Builder(br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro other) {
+    private Builder(br.com.roberto.avro.UsuarioAvro other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.nome)) {
         this.nome = data().deepCopy(fields()[0].schema(), other.nome);
@@ -250,7 +250,7 @@ public class UsuarioAvro extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'nome'.
       * @return This builder.
       */
-    public br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder setNome(java.lang.String value) {
+    public br.com.roberto.avro.UsuarioAvro.Builder setNome(java.lang.String value) {
       validate(fields()[0], value);
       this.nome = value;
       fieldSetFlags()[0] = true;
@@ -270,7 +270,7 @@ public class UsuarioAvro extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'nome' field.
       * @return This builder.
       */
-    public br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder clearNome() {
+    public br.com.roberto.avro.UsuarioAvro.Builder clearNome() {
       nome = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -290,7 +290,7 @@ public class UsuarioAvro extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'endereco'.
       * @return This builder.
       */
-    public br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder setEndereco(java.lang.String value) {
+    public br.com.roberto.avro.UsuarioAvro.Builder setEndereco(java.lang.String value) {
       validate(fields()[1], value);
       this.endereco = value;
       fieldSetFlags()[1] = true;
@@ -310,7 +310,7 @@ public class UsuarioAvro extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'endereco' field.
       * @return This builder.
       */
-    public br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder clearEndereco() {
+    public br.com.roberto.avro.UsuarioAvro.Builder clearEndereco() {
       endereco = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -330,7 +330,7 @@ public class UsuarioAvro extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'idade'.
       * @return This builder.
       */
-    public br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder setIdade(int value) {
+    public br.com.roberto.avro.UsuarioAvro.Builder setIdade(int value) {
       validate(fields()[2], value);
       this.idade = value;
       fieldSetFlags()[2] = true;
@@ -350,7 +350,7 @@ public class UsuarioAvro extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'idade' field.
       * @return This builder.
       */
-    public br.com.roberto.kafkaproducerpocwithavro.avro.UsuarioAvro.Builder clearIdade() {
+    public br.com.roberto.avro.UsuarioAvro.Builder clearIdade() {
       fieldSetFlags()[2] = false;
       return this;
     }

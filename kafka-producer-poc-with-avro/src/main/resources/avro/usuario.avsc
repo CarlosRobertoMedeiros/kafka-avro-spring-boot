@@ -1,7 +1,7 @@
 {
   "name": "UsuarioAvro",
   "type": "record",
-  "namespace": "br.com.roberto.kafkaproducerpocwithavro.avro",
+  "namespace": "br.com.roberto.avro",
   "fields": [
     {
       "name": "nome",
