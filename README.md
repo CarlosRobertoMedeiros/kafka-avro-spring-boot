@@ -9,7 +9,7 @@
 	- Carlos Roberto Medeiros de Lima
 	
 <p align="center">
-  <img src= "https://github.com/CarlosRobertoMedeiros/kafka-avro-spring-boot/blob/master/draw-io/implementation-spring-kafka-avro.drawio.png" />
+  <img src= "https://github.com/CarlosRobertoMedeiros/kafka-avro-spring-boot/blob/main/draw-io/implementation-spring-kafka-avro.drawio.png" />
 </p>
 
 ## General
