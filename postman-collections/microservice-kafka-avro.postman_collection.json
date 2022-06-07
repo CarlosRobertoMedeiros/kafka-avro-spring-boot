@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "a11ee1c4-7bde-48d8-ab59-56db76c7b653",
+		"name": "microservice-kafka-avro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12900387"
+	},
+	"item": [
+		{
+			"name": "envio-mensagens",
+			"item": [
+				{
+					"name": "enviarMensagem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\":\"Carlos Roberto\",\r\n  \"endereco\":\"SQN 999 Bloco Z apt 1002\",\r\n  \"idade\":25\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
